@@ -1,0 +1,93 @@
+{
+  "stats": {
+    "suites": 0,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2022-09-27T12:06:34.157Z",
+    "end": "2022-09-27T12:06:35.570Z",
+    "duration": 1413,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "0bebb0f9-8c14-4c56-ac26-5a7d674fb328",
+      "title": "",
+      "fullFile": "cypress\\e2e\\3-tests\\tests.cy.js",
+      "file": "cypress\\e2e\\3-tests\\tests.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [
+        {
+          "title": "An uncaught error was detected outside of a test",
+          "fullTitle": "An uncaught error was detected outside of a test",
+          "timedOut": null,
+          "duration": 1127,
+          "state": "failed",
+          "speed": null,
+          "pass": false,
+          "fail": true,
+          "pending": false,
+          "context": null,
+          "code": "throw err;",
+          "err": {
+            "message": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'native')\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.",
+            "estack": "TypeError: The following error originated from your test code, not from Cypress.\n\n  > Cannot read properties of undefined (reading 'native')\n\nWhen Cypress detects uncaught errors originating from your test code it will automatically fail the current test.\n\nCypress could not associate this error to any specific test.\n\nWe dynamically generated a new test to display this failure.\n    at ./node_modules/fs-extra/lib/fs/index.js (http://eaapp.somee.com/__cypress/tests?p=cypress\\support\\e2e.js:9277:24)\n    at __webpack_require__ (http://eaapp.somee.com/__cypress/tests?p=cypress\\support\\e2e.js:20:30)\n    at ./node_modules/fs-extra/lib/index.js (http://eaapp.somee.com/__cypress/tests?p=cypress\\support\\e2e.js:9296:6)\n    at __webpack_require__ (http://eaapp.somee.com/__cypress/tests?p=cypress\\support\\e2e.js:20:30)\n    at Object.eval (http://eaapp.somee.com/__cypress/tests?p=cypress\\support\\e2e.js:8147:12)\n    at ./cypress/support/e2e.js (http://eaapp.somee.com/__cypress/tests?p=cypress\\support\\e2e.js:8184:30)\n    at __webpack_require__ (http://eaapp.somee.com/__cypress/tests?p=cypress\\support\\e2e.js:20:30)\n    at 0 (http://eaapp.somee.com/__cypress/tests?p=cypress\\support\\e2e.js:11534:18)\n    at __webpack_require__ (http://eaapp.somee.com/__cypress/tests?p=cypress\\support\\e2e.js:20:30)\n    at eval (http://eaapp.somee.com/__cypress/tests?p=cypress\\support\\e2e.js:84:18)",
+            "diff": null
+          },
+          "uuid": "c1b8d03b-603e-45ba-bdb7-82a36e4461f0",
+          "parentUUID": "0bebb0f9-8c14-4c56-ac26-5a7d674fb328",
+          "isHook": false,
+          "skipped": false
+        }
+      ],
+      "suites": [],
+      "passes": [],
+      "failures": [
+        "c1b8d03b-603e-45ba-bdb7-82a36e4461f0"
+      ],
+      "pending": [],
+      "skipped": [],
+      "duration": 1127,
+      "root": true,
+      "rootEmpty": false,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": true,
+        "reportFilename": "report",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "charts": true,
+        "html": true,
+        "json": true,
+        "reportDir": "cypress/reports",
+        "reportFilename": "report",
+        "quiet": true,
+        "overwrite": false
+      },
+      "version": "6.2.0"
+    }
+  }
+}
