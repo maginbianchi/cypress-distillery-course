@@ -6,6 +6,10 @@ module.exports = defineConfig({
 
     },
     video: true,
+    retries: {
+      runMode: 2,
+      openMode: 2,
+    },
     screenshotsFolder: "cypress/screenshotsForFails",
     baseUrl: "http://eaapp.somee.com",
     excludeSpecPattern: [ "**/1-getting-started/**.js", "**/2-advanced-examples/**.js" ],
@@ -21,6 +25,7 @@ module.exports = defineConfig({
       "reportFilename": "report",
       "quiet": true, 
       "overwrite": false
-    }
+    },
+    experimentalSessionAndOrigin: true
   },
 });

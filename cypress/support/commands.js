@@ -29,3 +29,26 @@ Cypress.Commands.add('login', (username, password) => {
     cy.get('#Password').type(password)
     cy.get('.btn').click({ force: true })
 })
+
+
+Cypress.Commands.add('login2', (email, password) => {
+
+    cy.session([email, password], () => {
+        cy.visit('https://www.lambdatest.com')
+        cy.contains('Login').click();
+        cy.contains('Log in with Github').click();
+        /* ==== End Cypress Studio ==== */
+
+        cy.origin('https://www.github.com/',
+            { args: [email, password] },
+            ([email, password]) => {
+                cy.get('#login').type(email);
+                cy.get('#password').type(password);
+                cy.get('[data-signin-label="Sign in"]').click();
+            })
+
+        cy.get('#WS_Realtime > .pt-43 > .pt-30').should('contain', 'Manual Testing');
+
+    });
+
+});
